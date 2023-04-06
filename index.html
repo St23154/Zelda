@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="icon" type="image/png" href="indispensable/Logo.png">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Zelda BotW</title> <!--donne le tritre du document-->
+	<style>
+		
+
+		.imagelink:hover {
+			transform: scale(1.05);
+			/* agrandis l'image de 5% */
+			margin: 5%;
+			width: 90%;
+			border-radius: 10px;
+		}
+
+		.imagelink {
+			margin: 5%;
+			width: 90%;
+			border-radius: 10px;
+		}
+
+		.rectangleFOND {
+			width: 33%;
+			border-radius: 10px;
+			color: #333;
+			background-color: rgba(255, 255, 255, 0.9);
+			margin-right: 3px;
+			margin-left: 3px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+
+
+		.rectanglelink {
+			width: 49.6%;
+			border-radius: 10px;
+			color: #333;
+			background-color: rgba(255, 255, 255, 0.9);
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+
+		.imageeiji {
+			margin: 5%;
+			width: 90%;
+			border-radius: 10px;
+			/* arrondis les bords de l'image*/
+		}
+
+		.imageeiji img:hover {
+			border-radius: 10px;
+			/* arrondis les bords de l'image */
+			transform: scale(1.1);
+			/* agrandis l'image de 10% */
+			cursor: pointer;
+			/* transforme la souris en pointeur */
+		}
+
+		.rectangleeijiaonuma {
+			width: 49.6%;
+			/*crée un style que je nomme rectangle*/
+			border-radius: 10px;
+			/*rends plus stylé le rectangle en y arrondissant ses angles*/
+			color: #333;
+			/*cpuleur du texte*/
+
+			background-color: rgba(255, 255, 255, 0.9);
+			/*couleur du fond, mais en plus avec rgba ca permets de mettre de l'opacité seulement a la couleur du fond*/
+			margin-top: 20px;
+			/*écart entre les éléments voisins, on peut mettre 1 seule valeur mais avec les 4 valeurs on détermine l'écart pour chaque coé du rectangle, et si on ajoute "-top" alors on peut déterminer l'écart avec seulement l'élément d'au dessus*/
+			margin-bottom: 20px;
+			/*pareil mais pour le bas*/
+		}
+
+		body {
+			background-image: url("indispensable/fondprincipal.jpg");
+			/*défini une image en arrière plan*/
+			background-repeat: no-repeat;
+			/*évite le prblm rencontré avec willen*/
+			background-size: cover;
+			/*l'image couvre la taille de la page*/
+		}
+
+		.titredulogo {
+			background-color: transparent;
+			display: flex;
+		}
+
+		.titredulogo img {
+			width: 90px;
+			height: 40px;
+			margin-right: 10px;
+		}
+
+		a {
+			color: #272502;
+			text-decoration: none;
+		}
+
+		a:hover {
+			text-decoration: underline;
+			color: #caac15 !important;
+			/*j'essai de faire en sorte que le texte devienne orange pour les texte sous l'image mais ca marche pas*/
+		}
+
+		h1,
+		h2 {
+
+			margin: 0;
+			font-weight: normal;
+			color: #9a8e10;
+		}
+
+		h3 {
+			font-family: 'MaPolice';
+			text-align: center;
+			color: #9a8e10;
+		}
+
+		p,
+		ul,
+		ol {
+			margin-top: 0;
+		}
+
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+
+		.rectangleblanc {
+			border-radius: 8px;
+			background-color: rgba(255, 255, 255, 0.9);
+			color: #333;
+			padding: 20px;
+			text-align: center;
+		}
+
+		.rectangleblanc h1 {
+			font-size: 40px;
+			margin-bottom: 10px;
+		}
+
+
+
+		nav ul {
+			margin: 0;
+			padding: 0;
+			display: flex;
+			list-style: none;
+		}
+
+		nav li {
+			margin-left: 10px;
+			font-size: 20px;
+			font-weight: bold;
+		}
+
+		.imagesprincipales {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			margin: 20px;
+		}
+
+		.imagesprincipales img {
+			margin: 10px;
+			width: 300px;
+			height: 200px;
+			object-fit: cover;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+			transition: transform 0.2s ease-in-out;
+		}
+
+		.imagesprincipales img:hover {
+			transform: scale(1.1);
+			cursor: pointer;
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+		}
+
+		.textesousimage {
+			font-size: 18px;
+			font-weight: bold;
+			margin-top: 10px;
+			text-align: center;
+			color: #fff;
+		}
+
+		.histoire {
+			border-radius: 10px;
+			background-color: rgba(255, 255, 255, 0.9);
+			color: #333;
+			padding: 20px;
+			text-align: center;
+			margin-top: 20px;
+		}
+
+		.possibilitées {
+			border-radius: 10px;
+			background-color: rgba(255, 255, 255, 0.9);
+			color: #333;
+			padding: 20px;
+			text-align: left;
+			margin-top: 20px;
+		}
+
+		h1 {
+			font-family: 'MaPolice', sans-serif;
+		}
+
+		.textespé {
+			font-family: 'MaPolice1', sans-serif;
+			font-size: 20px;
+		}
+
+		.rectanglebas {
+
+			justify-content: space-between !important;
+			position: relative !important;
+			display: flex !important;
+			flex-wrap: nowrap !important;
+		}
+
+		.rectanglebas1 {
+			display: flex;
+			flex-wrap: nowrap;
+		}
+
+		@font-face {
+			/*ajoute une police venant d'un des mes propres fichiers*/
+			font-family: 'MaPolice';
+			src: url("indispensable/PoliceBOTW.otf");
+		}
+
+		@font-face {
+			font-family: 'MaPolice1';
+			src: url("indispensable/PoliceTitre.ttf");
+		}
+	</style>
+</head>
+
+
+
+
+<body>
+	<div class="autoplay-message">
+		<p>Pour lancer la musique automatiquement, veuillez autoriser la lecture automatique dans les paramètres de
+			votre navigateur.</p>
+	</div>
+	<embed type="audio/mp3" src="indispensable/Officialtheme.mp3" volume="60" loop="false" autostart="true" />
+	<header class="rectangleblanc">
+		<h1 class="titredulogo">
+			<img src="indispensable/Logo.png" alt="Logo de mon site web">
+			Zelda Breath Of The Wild
+		</h1>
+		<footer class="textespé">
+			<h2>Explorez Le Plus grand jeu vidéo de tous les Temps!</h2>
+		</footer>
+
+		<nav>
+			<ul>
+				<li><a href="https://chocobonplan.com/?s=zelda+breath+of+the+wild&asl_active=1&p_asid=1&p_asl_data=cXRyYW5zbGF0ZV9sYW5nPTAmc2V0X2ludGl0bGU9Tm9uZSZzZXRfaW5jb250ZW50PU5vbmUmY3VzdG9tc2V0JTVCJTVEPWJw"
+						target="_blank">Acheter
+						le jeu</a></li>
+				<li><a href="https://gamebanana.com/mods/168235" target="_blank">Télécharger des modes</a></li>
+				<li><a href="https://www.youtube.com/watch?v=zw47_q9wbBE" target="_blank">Gameplay</a>
+				</li>
+				<li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" target="_blank">A propos de Nous</a></li>
+			</ul>
+
+		</nav>
+
+	</header>
+
+
+
+	<main>
+		<section class="imagesprincipales">
+			<a href="indispensable/Map.html" target="_blank">
+				<img src="indispensable/Map.jpg" alt="Map">
+				<div class="textesousimage">Explorer tout Hyrule</div>
+			</a>
+
+			<a href="https://www.youtube.com/watch?v=3PNCqB3evPQ" target="_blank">
+				<img src="indispensable/mode.jpg" alt="Modes">
+				<div class="textesousimage">Installer des modes</div>
+			</a>
+
+			<a href="indispensable/Monstres1.html" target="_blank">
+				<img src="indispensable/Ennemis.jpg" alt="Ennemis">
+				<div class="textesousimage">Combattre des ennemis</div>
+			</a>
+
+			<a href="https://www.youtube.com/watch?v=_nPI-SLMDtY" target="_blank">
+				<img src="indispensable/Grimper.jpg">
+				<div class="textesousimage">Grimper des montagnes</div>
+			</a>
+
+			<a href="https://gaming.gentside.com/zelda/zelda-breath-of-the-wild-tout-savoir-sur-les-montures-epona-les-ours-et-les-cerfs_art20178.html#:~:text=Monter%20des%20ours%2C%20des%20cerfs%20%3A&text=En%20effet%2C%20les%20animaux%20sauvages,par%20derri%C3%A8re%2C%20et%20sautez%20dessus."
+				target="_blank">
+				<img src="indispensable/Chevaux.jpg" alt="Chevaux">
+				<div class="textesousimage">Chevaucher des chevaux</div>
+			</a>
+
+			<a href="indispensable/RickRollRalph.mp4" target="_blank">
+				<img src="indispensable/Zelda.jpg" alt="Zelda">
+				<div class="textesousimage">Vivre une histoire d'amour</div>
+			</a>
+
+			<a href="https://geekprank.com/">
+				<img src="indispensable/Cuisine.jpg" alt="Cuisine">
+				<div class="textesousimage">Devenir cuisinier</div>
+			</a>
+
+			<a href="file:/D:/Photo/Estebane 4°5 Fiche2.jpg" target="_blank">
+				<img src="indispensable/Maison.jpg" alt="maison">
+				<div class="textesousimage">Construire sa propre maison</div>
+			</a>
+
+			<a href="https://www.youtube.com/watch?v=3PNCqB3evPQ" target="_blank">
+				<img src="indispensable/Zelda2.jpg" alt="New">
+				<div class="textesousimage">Bientot un nouveau titre</div>
+			</a>
+
+			<a href="https://www.youtube.com/watch?v=3PNCqB3evPQ" target="_blank">
+				<img src="indispensable/FanART.jpg" alt="FanART">
+				<div class="textesousimage">Les plus beaux fan art</div>
+			</a>
+
+		</section>
+
+		<footer class="possibilitées">
+			<h2>Fonctionnalitées</h2>
+			<ul>
+				<li>Exploration presque illimitée</li>
+				<li>Cycle météorologiques réalistes</li>
+				<li>Survie</li>
+				<li>Multiples énigmes et mystères</li>
+				<li>Personnalisation totale de soi</li>
+				<li>Et bien plus encore....</li>
+			</ul>
+		</footer>
+
+		<footer class="histoire">
+			<h2>Histoire</h2>
+			<p>The Legend of Zelda: Breath of the WildNote 1 (ou simplement Breath of the Wild, parfois abrégé BotW) est
+				un jeu d'action-aventure développé par la division Nintendo EPD, assisté par Monolith Soft, et publié
+				par Nintendo le 3 mars 2017 sur Nintendo Switch lors du lancement de la console, ainsi que sur Wii U
+				dont il est le dernier jeu produit par Nintendo. C'est le dix-neuvième jeu de la franchise The Legend of
+				Zelda.
+
+				Breath of the Wild propose d'incarner Link, amnésique, réveillé après un long sommeil d'une centaine
+				d'années par une mystérieuse voix qui le guide afin d'éliminer Ganon, « Le Fléau », et restaurer la paix
+				dans le royaume d'Hyrule. À l'instar du premier jeu de la série sorti en 1986, le joueur reçoit peu
+				d'instructions et peut librement explorer un univers en monde ouvert, en résolvant différentes quêtes,
+				sanctuaires et énigmes, en plus de la tâche principale.
+
+				L'un des objectifs majeurs de cet épisode fixé par l'équipe de développement est de repenser les
+				conventions de la série. Le jeu propose ainsi de nouvelles mécaniques de gameplay, comme
+				l'implémentation d'un moteur physique complet pour la gestion des objets et de l'environnement, des voix
+				off pour les personnages principaux, mais aussi des visuels en haute définition. L'univers de Breath of
+				the Wild n'est pas structuré linéairement et est conçu pour récompenser l'exploration, l'histoire
+				pouvant ainsi être suivie de manière non linéaire.
+
+				Lors de sa sortie, le jeu est encensé par la critique. Malgré quelques faiblesses techniques et des
+				visuels en deçà de ceux des jeux des consoles concurrentes, il est ovationné pour sa direction
+				artistique, la démesure de son monde ouvert et de son contenu, la qualité des musiques et l'ingéniosité
+				des énigmes. Le jeu reçoit différentes récompenses en 2016 et 2017, dont le prix du jeu de l'année aux
+				Game Awards 2017. Au 30 juin 2021, il s'est écoulé à 24,89 millions d'exemplaires, dont 23,20 millions
+				sur Nintendo Switch et 1,69 million sur Wii U, ce qui fait de lui le jeu le plus vendu de la franchise.
+				Une suite intitulée The Legend of Zelda: Tears of the Kingdom est annoncée pendant l'E3 2019 et prévue
+				pour mai 2023.</p>
+		</footer>
+	</main>
+	<div class="rectanglebas">
+		<div class="rectangleeijiaonuma">
+			<h3>Eiji Aonuma</h3> <!--titre-->
+			<!--classe spécialement crée aux bonnes dimiensions pour le texte et l'image-->
+			<a href="https://fr.wikipedia.org/wiki/Eiji_Aonuma" target="_blank" class="imageeiji">
+				<!--le texte et le titre et l'image sont des liens vers une page  wikipédia-->
+				Eiji Aonuma (青沼 英二, Aonuma Eiji?), né le 16 mars 1963, est un créateur de jeu vidéo japonais travaillant
+				pour la
+				société Nintendo. Il est surtout connu pour être l'un des principaux créateurs de la série de jeux
+				d'action-aventure The Legend of Zelda depuis l'opus The Legend of Zelda: Ocarina of Time.
+				<img src="indispensable/EijiAonuma.jpg" alt="Photo de Eiji Aonuma" class="imageeiji">
+				<!--ici on remets class=imageeiji car cela permets de lui arrondir les bords-->
+			</a>
+		</div>
+
+		<div class="rectanglelink"> <!--copié-colé de le code au dessus-->
+			<h3>Link</h3>
+			<a href="https://www.nautiljon.com/persos-jeuxvideo/link,2819.html" target="_blank">
+				Dans Breath of the Wild, Link se réveille dans le Sanctuaire de la Renaissance, après un très long
+				sommeil
+				de cent ans. Amnésique, le jeune homme devra parcourir et voyager à travers les immenses contrées du
+				royaume
+				d'Hyrule, dévasté un siècle auparavant par Ganon, le Fléau, dans l'espoir de regagner sa mémoire perdue,
+				et
+				de vaincre une bonne fois pour toute le mal et la haine qui ronge le royaume. Pour ce faire, il devra
+				arpenter les quatre coins d'Hyrule, afin de reprendre le contrôle des créatures Divines sous l'emprise
+				de
+				Ganon, et ainsi libérer l'esprit des Prodiges qui y sont enfermés.
+			</a>
+		</div>
+	</div>
+
+	<div class="rectanglebas1">
+		<div class="rectangleFOND">
+			<img src="indispensable/FOND.jpg" alt="Photo de Eiji Aonuma" class="imagelink">
+		</div>
+
+		<div class="rectangleFOND">
+			<h3>Avis</h3>
+			-"La meilleure franchise zelda de tous les temps, l'histoire est a couper le soufle tout autant que le
+			scénario. La mécanique de jeu est très intéressante la physique plutot très réaliste nous permets a nous fan
+			d'imaginer, d'innover des solutions j'amais pensé avant. Zelda botw est le meilleur jeu vidéo de tous les
+			temps"
+			-"Ce jeu vaut franchement le coup, j'en suis un de ses plus grand fan. Les graphismes sont juste incroyable
+			il nous plonge dans un tout autre univers. Nitendo n'a jamais aussi bien réussi son coup, le jeu a bientot
+			6ans et il est toujours aussi bien, de plus un nouveau zelda va bientot sortie..."
+		</div>
+
+		<div class="rectangleFOND"> <!--copié-colé de le code au dessus-->
+			<h3>Avis De Willen</h3>
+			<a href="https://www.nautiljon.com/persos-jeuxvideo/link,2819.html" target="_blank">
+				Je n'ai jamais joué a zelda, je ne trouve pas ca wouf. Mais j'aime bien le FOOTBALL!!!
+			</a>
+		</div>
+
+	</div>
+
+</body>
+
+</html>

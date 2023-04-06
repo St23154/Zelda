@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" type="image/png" href="Monstre.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monstres de Zelda BOTW</title>
+    <style>
+        .image {
+            margin-bottom: 3%;
+            margin-top: 5%;
+            margin-left: 2.5%;
+            margin-right: 3%;
+            width: 200px;
+            border-radius: 10px;
+        }
+
+        .image:hover {
+            transform: scale(1.05);
+        }
+
+        .rectangledescription {
+            margin-left: 2%;
+            margin-right: 10%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-left: 400px;
+            border-right: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+            font-family: 'Description', sans-serif;
+            width: 500px;
+            border-radius: 10px;
+            color: #333;
+        }
+
+
+        .rectangledescription h2 {
+            text-align: center;
+            color: #ff0000;
+            font-weight: bold;
+            font-family: 'Monstre', sans-serif;
+        }
+
+
+        .monstre {
+            border-radius: 10px;
+            /*rends plus stylé le rectangle en y arrondissant ses angles*/
+            color: #333;
+            /*cpuleur du texte*/
+            width: 220px;
+            background-color: rgba(255, 255, 255, 0.9);
+            /*couleur du fond, mais en plus avec rgba ca permets de mettre de l'opacité seulement a la couleur du fond*/
+            margin-top: 20px;
+            /*écart entre les éléments voisins, on peut mettre 1 seule valeur mais avec les 4 valeurs on détermine l'écart pour chaque coé du rectangle, et si on ajoute "-top" alors on peut déterminer l'écart avec seulement l'élément d'au dessus*/
+            margin-bottom: 20px;
+            /*pareil mais pour le bas*/
+        }
+
+
+        .monstreetdescription {
+
+            justify-content: space-between;
+            position: relative;
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+
+        .titre {
+            opacity: 0.9;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #333;
+            padding: 20px;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .logo-title img {
+            margin-right: 10px;
+            /* On détermine l'écart entre le logo et le texte */
+            width: 90px;
+            height: 70px;
+        }
+
+        .header {
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-family: 'Monstre', sans-serif;
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+
+
+        .logo-title {
+            align-items: center;
+            /* centre le texte et le logo a la vertical */
+            display: flex;
+            /* le texte et le logo peuvent bouger */
+            background-color: transparent;
+            /* le du logo est au format .png ainsi son fond est défini comme transparent */
+            justify-content: center;
+            /* centre le texte et le logo */
+        }
+
+        body {
+            background-image: url("FondMonstre.jpg");
+            /* On défénis une image dans le meme fichier que le code html, ici l'image s'appelle "FondMonstre" */
+            background-repeat: no-repeat;
+            /* Ici on évite un problème rencontrée précedemment avec willen: la répétition du fond */
+            background-size: cover;
+            /* On défénis les dimensions du fond */
+        }
+
+        .textecouleur {
+            font-weight: bold;
+            color: #d62000
+        }
+        
+        a {
+            font-family: sans-serif;
+            color: #272502;
+            text-decoration: none;
+        }
+
+        a:hover {
+            font-family: 'Description', sans-serif;
+            text-decoration: underline;
+            color: #caac15;
+        }
+
+        @font-face {
+            font-family: 'Description';
+            src: url("Police\ Descrption\ Monstre.otf");
+        }
+
+        @font-face {
+            font-family: 'Monstre';
+            src: url("Titre.otf");
+        }
+    
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="logo-title">
+            <img src="Monstre.png" alt="Logo de mon site web" >
+            Liste des Monstres
+        </h1>
+
+        <nav>
+            <ul>
+                <li><a href="https://zelda-botw-encyclopedie.fandom.com/fr/wiki/Monstres" class="headerhhg">Liste plus
+                        détaillée de tous
+                        les monstres</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <div class="monstreetdescription">
+        <div class="monstre">
+            <a href="https://fr.wikipedia.org/wiki/Eiji_Aonuma" target="_blank" class="image">
+                <img src="chuchu.png" alt="chuchu" class="image">
+            </a>
+        </div>
+
+        <div class="rectangledescription">
+            <h2>Chuchu</h2>
+            <p class="textecouleur">Les chuchu sont des sortes de "grostasdemorve innofensif (ou presque) il en existe
+                des normaux mais aussi des chuchu de glace, de feu et d'électricité. Genshin impact les a copié..."
+            </p>
+        </div>
+        
+    </div>
+
+    <div class="monstreetdescription">
+        <div class="monstre">
+            <a href="https://fr.wikipedia.org/wiki/Eiji_Aonuma" target="_blank" class="image">
+                <img src="Souris.jpg" alt="chauve-souris" class="image">
+            </a>
+        </div>
+
+        <div class="rectangledescription">
+            <h2>Chauve-souris</h2>
+            <p class="textecouleur">Les chauves-souris sont tout autant innovensive que le chuchu, tout comme les chuchu
+                il en existe différent type. De plus elle peuvent se déplacer en groupe, ce qui casse les oreilles plus
+                qu'autre chose.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="monstreetdescription">
+        <div class="monstre">
+            <a href="https://fr.wikipedia.org/wiki/Eiji_Aonuma" target="_blank" class="image">
+                <img src="Octoflot.jpg" alt="Octoflot" class="image">
+            </a>
+        </div>
+
+        <div class="rectangledescription">
+            <h2>Chuchu</h2>
+            <p class="textecouleur">Les Octoflot sont relativement innofensif, présents notament dans les des courses
+                contre la montre ils sont plus relou qu'autre chose, difficile a tuer dans certains ca. Ils peuvent se
+                cacher sous terre mais ne sont pas très précis.
+            </p>
+        </div>
+    </div>
+
+    <div class="monstreetdescription">
+        <div class="monstre">
+            <a href="https://fr.wikipedia.org/wiki/Eiji_Aonuma" target="_blank" class="image">
+                <img src="sorcier.jpg" alt="Sorcier" class="image">
+            </a>
+        </div>
+
+        <div class="rectangledescription">
+            <h2>Sorcier</h2>
+            <p class="textecouleur">Les Octoflot sont relativement innofensif, présents notament dans les des courses
+                contre la montre ils sont plus relou qu'autre chose, difficile a tuer dans certains ca. Ils peuvent se
+                cacher sous terre mais ne sont pas très précis.
+            </p>
+        </div>
+    </div>
+
+    <div class="monstreetdescription">
+        <div class="monstre">
+            <a href="https://fr.wikipedia.org/wiki/Eiji_Aonuma" target="_blank" class="image">
+                <img src="Bokoblin.jpg" alt="Bokoblin" class="image">
+            </a>
+        </div>
+
+        <div class="rectangledescription">
+            <h2>Bokoblin</h2>
+            <p class="textecouleur">Les Octoflot sont relativement innofensif, présents notament dans les des courses
+                contre la montre ils sont plus relou qu'autre chose, difficile a tuer dans certains ca. Ils peuvent se
+                cacher sous terre mais ne sont pas très précis.
+            </p>
+        </div>
+    </div>
+
+    <div class="monstreetdescription">
+        <div class="monstre">
+            <a href="https://fr.wikipedia.org/wiki/Eiji_Aonuma" target="_blank" class="image">
+                <img src="Stalbokoblin.jpg" alt="Stalbokoblin" class="image">
+            </a>
+        </div>
+
+        <div class="rectangledescription">
+            <h2>Stalbokoblin</h2>
+            <p class="textecouleur">Les Octoflot sont relativement innofensif, présents notament dans les des courses
+                contre la montre ils sont plus relou qu'autre chose, difficile a tuer dans certains ca. Ils peuvent se
+                cacher sous terre mais ne sont pas très précis.
+            </p>
+        </div>
+    </div>
+
+    <div class="monstreetdescription">
+        <div class="monstre">
+            <a href="https://fr.wikipedia.org/wiki/Eiji_Aonuma" target="_blank" class="image">
+                <img src="Moblin.png" alt="Moblin" class="image">
+            </a>
+        </div>
+
+        <div class="rectangledescription">
+            <h2>Moblin</h2>
+            <p class="textecouleur">Les moblins sont des petits squelettes pas très puissants ils lancent des pièrres
+                qui ne font pas beaucoup de dégats sortent de terre souvent par groupe de 3.
+            </p>
+        </div>
+    </div>
+
+    <div class="monstreetdescription">
+        <div class="monstre">
+            <a href="https://fr.wikipedia.org/wiki/Eiji_Aonuma" target="_blank" class="image">
+                <img src="Lynel.jpg" alt="Lynel" class="image">
+            </a>
+        </div>
+
+        <div class="rectangledescription">
+            <h2>Lynel</h2>
+            <p class="textecouleur">Les lynel sont des sortes de centaure, il en existe des différents de différentes
+                puissances. Ils sont compliqué a vaincre.
+            </p>
+        </div>
+    </div>
+
+</body>
+
+</html>

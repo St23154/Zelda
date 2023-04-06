@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Mon jeu de plateforme</title>
+	<style>
+		/* Styles pour la page HTML et le canevas du jeu */
+		html, body {
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+		}
+
+		canvas {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 1;
+		}
+
+		/* Styles pour les éléments du jeu */
+		.player {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 32px;
+			height: 32px;
+			background-color: blue;
+			z-index: 2;
+		}
+
+		.platform {
+			position: absolute;
+			background-color: brown;
+			z-index: 1;
+		}
+	</style>
+</head>
+<body>
+	<!-- Canevas pour le jeu -->
+	<canvas id="game-canvas"></canvas>
+
+	<!-- Eléments du jeu -->
+	<div id="player" class="player"></div>
+	<div id="platform1" class="platform" style="width: 200px; height: 20px; bottom: 100px; left: 100px;"></div>
+	<div id="platform2" class="platform" style="width: 100px; height: 20px; bottom: 200px; left: 300px;"></div>
+	<div id="platform3" class="platform" style="width: 150px; height: 20px; bottom: 300px; left: 200px;"></div>
+
+	<!-- Script pour le jeu -->
+	<script>
+		// Récupérer les éléments du jeu
+		const canvas = document.getElementById('game-canvas');
+		const player = document.getElementById('player');
+		const platforms = document.querySelectorAll('.platform');
+
+		// Définir les propriétés du joueur
+		let playerX = 50;
+		let playerY = 0;
+		let playerSpeedX = 0;
+		let playerSpeedY = 0;
+
+		// Définir les propriétés du jeu
+		const GRAVITY = 0.5;
+
+		// Dessiner le joueur
+		function drawPlayer() {
+			player.style.transform = `translate(${playerX}px, ${playerY}px)`;
+		}
+
+		// Mettre à jour la position du joueur
+		function updatePlayer() {
+			// Ajouter la gravité au joueur
+			playerSpeedY += GRAVITY;
+
+			// Mettre à jour la position du joueur en fonction de sa vitesse
+			playerX += playerSpeedX;
+			playerY += playerSpeedY;
+
+			// Vérifier les collisions avec les plateformes
+			platforms.forEach((platform) => {
+				if (playerY + 32 >= platform.offsetTop && playerY <= platform.offsetTop + platform.offsetHeight && playerX + 32 >= platform.offsetLeft && playerX <= platform.offsetLeft + platform.offsetWidth)
+				{
+			// Si le joueur touche le haut de la plateforme, le placer dessus
+			if (playerY + 32 <= platform.offsetTop + platform.offsetHeight && playerY >= platform.offsetTop + platform.offsetHeight - playerSpeedY) {
+				playerY = platform.offsetTop + platform.offsetHeight;
+				playerSpeedY = 0;
+				}
+			// Si le joueur touche le bas de la plateforme, le placer dessous
+			else if (playerY >= platform.offsetTop && playerY <= platform.offsetTop + playerSpeedY) {
+					playerY = platform.offsetTop - 32;
+					playerSpeedY = 0;
+				}
+
+				// Si le joueur touche la gauche de la plateforme, le placer à gauche
+				else if (playerX + 32 >= platform.offsetLeft && playerX <= platform.offsetLeft + platform.offsetWidth && playerY + 32 >= platform.offsetTop && playerY <= platform.offsetTop + platform.offsetHeight) {
+					playerX = platform.offsetLeft - 32;
+					playerSpeedX = 0;
+				}
+
+				// Si le joueur touche la droite de la plateforme, le placer à droite
+				else if (playerX <= platform.offsetLeft + platform.offsetWidth && playerX + 32 >= platform.offsetLeft && playerY + 32 >= platform.offsetTop && playerY <= platform.offsetTop + platform.offsetHeight) {
+					playerX = platform.offsetLeft + platform.offsetWidth;
+					playerSpeedX = 0;
+				}
+			}
+		});
+	}
+
+	// Mettre à jour le jeu
+	function updateGame() {
+		updatePlayer();
+		drawPlayer();
+
+		// Répéter la fonction de mise à jour
+		requestAnimationFrame(updateGame);
+	}
+
+	// Démarrer le jeu
+	updateGame();
+</script>
+</body>
+</html>
